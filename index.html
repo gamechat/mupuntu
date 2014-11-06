@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Mupuntu by gamechat</title>
+    <title>Mupuntu.JS by gamechat</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Mupuntu</h1>
-        <h2>Game Development</h2>
+        <h1>Mupuntu.JS</h1>
+        <h2>Game Development on Gamechat</h2>
         <a href="https://github.com/gamechat/mupuntu" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
@@ -78,16 +78,16 @@
 <span class="cm">* @Date         Thu 10 August 2014 08:50:32 PM GMT </span>
 <span class="cm">* @Description:     My Game Logic </span>
 <span class="cm">*/</span> 
-<span class="nx">GAMECHAT</span><span class="p">.</span><span class="nx">GAME</span><span class="p">.</span><span class="nx">createGamePlay</span><span class="p">(</span><span class="s2">"APPID-8495372645"</span><span class="p">,</span> <span class="p">{</span> 
+GAMECHAT.GAME.createGamePlay(<span class="s2">"APPID-8495372645"</span>, { 
 
     <span class="cm">/* </span>
 <span class="cm">    * @Method init</span>
 <span class="cm">    * @Description init hook [Compulsory] </span>
 <span class="cm">    *   Initialize, Bootstrap and create your game here</span>
 <span class="cm">    */</span> 
-    <span class="nx">init</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(){</span> 
+    <span class="nf">init</span> : <span class="kt">function</span>(){ 
 
-    <span class="p">},</span> 
+    }, 
 
     <span class="cm">/* </span>
 <span class="cm">    * @Method       sleep </span>
@@ -95,9 +95,9 @@
 <span class="cm">    *   This method is called when user navigates away from the display </span>
 <span class="cm">    */</span> 
 
-    <span class="nx">sleep</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(){</span> 
+    <span class="nf">sleep</span> : <span class="kt">function</span> (){ 
 
-    <span class="p">},</span> 
+    }, 
 
     <span class="cm">/* </span>
 <span class="cm">    * @Method       wake </span>
@@ -105,9 +105,9 @@
 <span class="cm">    *   This method is called when user navigates back to the game screen </span>
 <span class="cm">    */</span> 
 
-    <span class="nx">wake</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(){</span> 
+    <span class="nf">wake</span> : <span class="kt">function</span> (){ 
 
-    <span class="p">},</span> 
+    }, 
 
     <span class="cm">/* </span>
 <span class="cm">    * @Method       die </span>
@@ -115,12 +115,11 @@
 <span class="cm">    *   This method is called when user exits the app </span>
 <span class="cm">    */</span> 
 
-    <span class="nx">die</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(){</span> 
+    <span class="nf">die</span> : <span class="kt">function</span> (){ 
 
-    <span class="p">},</span> 
+    }, 
 
-<span class="p">});</span>
-</pre></div>
+});</pre></div>
 
 <h2>
 <a id="mupuntujs-api" class="anchor" href="#mupuntujs-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>MUPUNTU.JS API</h2>
@@ -130,30 +129,26 @@
 
 <p>Get the entire available drawable width of the screen</p>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">getScreen</span><span class="p">().</span><span class="nx">getWidth</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.getScreen().getWidth();</pre></div>
 
 <p>Get the entire available drawable height of the screen</p>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">getScreen</span><span class="p">().</span><span class="nx">getHeight</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.getScreen().getHeight();</pre></div>
 
 <h1>
 <a id="game-players-info" class="anchor" href="#game-players-info" aria-hidden="true"><span class="octicon octicon-link"></span></a>Game Player's Info</h1>
 
 <p>Get the Local User Object</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">uObject</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getLocalUser</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">uObject</span><span class="p">.</span><span class="nx">displayName</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">uObject</span><span class="p">.</span><span class="nx">playerID</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="k">var</span> uObject <span class="o">=</span> <span class="nb">this</span>.getLocalUser();
+<span class="nc">console</span><span class="nf">.log</span>(uObject.displayName);
+<span class="nc">console</span><span class="nf">.log</span>(uObject.playerID);</pre></div>
 
 <p>get the Remote User Object</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">ruObject</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getRemoteUser</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ruObject</span><span class="p">.</span><span class="nx">displayName</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ruObject</span><span class="p">.</span><span class="nx">playerID</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="k">var</span> ruObject <span class="o">=</span> <span class="nb">this</span>.getRemoteUser();
+<span class="nc">console</span><span class="nf">.log</span>(ruObject.displayName);
+<span class="nc">console</span><span class="nf">.log</span>(ruObject.playerID);</pre></div>
 
 <h1>
 <a id="database-support" class="anchor" href="#database-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Support</h1>
@@ -161,11 +156,10 @@
 <p>Provides database support. local and remote model syncing. Gamechat provides two data storages: the gamestate object for saving gamestates and the scoreboard object for storing scores, leaderboard and some useful game configurations. The gamestate and scoreboard object is passed as a single parameters to the provided callback. </p>
 
 <div class="highlight highlight-javascript"><pre><span class="c1">// this.getModels(callback, context);</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">getModels</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">gamedata</span><span class="p">){</span>
-    <span class="nx">_gamestateModel</span> <span class="o">=</span> <span class="nx">gamedata</span><span class="p">.</span><span class="nx">gamestate</span><span class="p">;</span>
-    <span class="nx">_scoreboardModel</span> <span class="o">=</span> <span class="nx">gamedata</span><span class="p">.</span><span class="nx">scoreboard</span><span class="p">;</span>
-<span class="p">},</span> <span class="k">this</span><span class="p">);</span>
-</pre></div>
+<span class="nb">this</span>.getModels(<span class="kt">function</span>(<span class="nv">gamedata</span>){
+    _gamestateModel <span class="o">=</span> gamedata.gamestate;
+    _scoreboardModel <span class="o">=</span> gamedata.scoreboard;
+}, <span class="nb">this</span>);</pre></div>
 
 <h3>
 <a id="two-available-data-storage" class="anchor" href="#two-available-data-storage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two Available Data Storage</h3>
@@ -180,50 +174,44 @@
 
 <p>You can store key value pair (json or javascript objects)</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">_gamestateModel</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'turn'</span><span class="p">,</span> <span class="p">{</span><span class="nx">player</span><span class="o">:</span> <span class="err">“</span><span class="nx">XXXXXX</span><span class="err">”</span><span class="p">});</span>
-<span class="nx">_scoreboardModel</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'totalgames'</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre>_gamestateModel.set(<span class="s1">'turn'</span>, {player<span class="o">:</span> “XXXXXX”});
+_scoreboardModel.set(<span class="s1">'totalgames'</span>, <span class="m">0</span>);</pre></div>
 
 <p>You can store javascript or json objects in the database</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">gamemove</span> <span class="o">=</span> <span class="p">{};</span> 
-<span class="nx">gamemove</span><span class="p">.</span><span class="nx">gameboard</span> <span class="o">=</span> <span class="p">{};</span> 
-<span class="nx">gamemove</span><span class="p">.</span><span class="nx">gameboard</span><span class="p">[</span><span class="nx">position</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span> 
-<span class="nx">gamemove</span><span class="p">.</span><span class="nx">gameboard</span><span class="p">[</span><span class="nx">position</span><span class="p">].</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> 
-<span class="nx">gamemove</span><span class="p">.</span><span class="nx">gameboard</span><span class="p">[</span><span class="nx">position</span><span class="p">].</span><span class="nx">player</span> <span class="o">=</span> <span class="nx">playerId</span><span class="p">;</span>
+<div class="highlight highlight-javascript"><pre><span class="k">var</span> gamemove <span class="o">=</span> {}; 
+gamemove.gameboard <span class="o">=</span> {}; 
+gamemove.gameboard[position] <span class="o">=</span> {}; 
+gamemove.gameboard[position].<span class="no">status</span> <span class="o">=</span> <span class="kc">true</span>; 
+gamemove.gameboard[position].player <span class="o">=</span> playerId;
 
-<span class="nx">_gamestateModel</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">gamemove</span><span class="p">);</span>
-</pre></div>
+_gamestateModel.set(gamemove);</pre></div>
 
 <h2>
 <a id="how-to-listen-for-changes-in-the-state-of-the-model" class="anchor" href="#how-to-listen-for-changes-in-the-state-of-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to listen for changes in the state of the model</h2>
 
 <p>You can register listeners on any parameters that change in the model as follows:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">_gamestateModel</span><span class="p">.</span><span class="nx">onChangeEventListener</span><span class="p">(</span><span class="err">“</span><span class="nx">gameboard</span><span class="p">.</span><span class="nx">turn</span><span class="err">”</span><span class="p">,</span><span class="nx">callback</span><span class="p">,</span> <span class="nx">context</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre>_gamestateModel.onChangeEventListener(“gameboard.turn”,callback, context);
 
-<span class="nx">_gamestateModel</span><span class="p">.</span><span class="nx">onChangeEventListener</span><span class="p">(</span><span class="err">“</span><span class="nx">gameboard</span><span class="p">.</span><span class="nx">moves</span><span class="err">”</span><span class="p">,</span><span class="nx">callback</span><span class="p">,</span>
-<span class="nx">context</span><span class="p">);</span>
-</pre></div>
+_gamestateModel.onChangeEventListener(“gameboard.moves”,callback,
+context);</pre></div>
 
 <h2>
 <a id="how-to-remove-the-default-splash-screen" class="anchor" href="#how-to-remove-the-default-splash-screen" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to remove the default splash screen</h2>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">removeSplash</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.removeSplash();</pre></div>
 
 <h2>
 <a id="how-to-get-the-database" class="anchor" href="#how-to-get-the-database" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to get the database</h2>
 
 <p>this.getGamestateModel() returns the gamestate object or returns undefined if it's not available. It is recommended to use  getModels method when you are not sure if it's available or not.</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">_gamestateModel</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getGamestateModel</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre>_gamestateModel <span class="o">=</span> <span class="nb">this</span>.getGamestateModel();</pre></div>
 
 <p>this.getScoreboardModel() - returns the scoreboard object or returns undefined if it's not available. It is recommended to use getModels method when you are not sure if it's available or not.</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">_scoreboardModel</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getScoreboardModel</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre>_scoreboardModel <span class="o">=</span> <span class="nb">this</span>.getScoreboardModel();</pre></div>
 
 <h2>
 <a id="how-to-know-when-user-goes-offline" class="anchor" href="#how-to-know-when-user-goes-offline" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to know when user goes offline</h2>
@@ -234,20 +222,18 @@
 
 <p>callback: method to call when the event occurs</p>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"gc:user-offline"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"local user has gone offline"</span><span class="p">);</span>
-<span class="p">});</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"gc:user-online"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"local user is back online"</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.addEventListener(<span class="s2">"gc:user-offline"</span>, <span class="kt">function</span>(){
+    <span class="nc">console</span><span class="nf">.log</span>(<span class="s2">"local user has gone offline"</span>);
+});
+<span class="nb">this</span>.addEventListener(<span class="s2">"gc:user-online"</span>, <span class="kt">function</span>(){
+    <span class="nc">console</span><span class="nf">.log</span>(<span class="s2">"local user is back online"</span>);
+});</pre></div>
 
 <p>You can stop listening anytime with this.removeEventListener(eventType)</p>
 
 <div class="highlight highlight-javascript"><pre><span class="c1">// These unsubscribes to the two subscribed events</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">"gc:user-online"</span><span class="p">);</span>
-<span class="k">this</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">"gc:user-offline"</span><span class="p">);</span>
-</pre></div>
+<span class="nb">this</span>.removeEventListener(<span class="s2">"gc:user-online"</span>);
+<span class="nb">this</span>.removeEventListener(<span class="s2">"gc:user-offline"</span>);</pre></div>
 
 <h2>
 <a id="how-to-create-a-custom-event" class="anchor" href="#how-to-create-a-custom-event" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to create a custom Event</h2>
@@ -266,8 +252,7 @@
 
 <p>data is the data to send along which is recived by the callback</p>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">triggerEvent</span><span class="p">(</span><span class="s2">"reset-game"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.triggerEvent(<span class="s2">"reset-game"</span>, <span class="kc">true</span>);</pre></div>
 
 <ul>
 <li>this.listenTo(eventType, callback, context)</li>
@@ -275,11 +260,10 @@
 
 <p>eventType: an abitrary event to subscribe for</p>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">listenTo</span><span class="p">(</span><span class="s2">"reset-game"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"We got an event fired by a remote device:"</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"remote device said: "</span> <span class="o">+</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">this</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.listenTo(<span class="s2">"reset-game"</span>, <span class="kt">function</span>(<span class="nv">data</span>){
+    <span class="nc">console</span><span class="nf">.log</span>(<span class="s2">"We got an event fired by a remote device:"</span>);
+    <span class="nc">console</span><span class="nf">.log</span>(<span class="s2">"remote device said: "</span> <span class="o">+</span> data);
+} <span class="nb">this</span>);</pre></div>
 
 <ul>
 <li>this.stopListeningTo(eventType)</li>
@@ -287,8 +271,7 @@
 
 <p>eventType is the eventType to unsubscribe</p>
 
-<div class="highlight highlight-javascript"><pre><span class="k">this</span><span class="p">.</span><span class="nx">stopListeningTo</span><span class="p">(</span><span class="s2">"reset-game"</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="nb">this</span>.stopListeningTo(<span class="s2">"reset-game"</span>);</pre></div>
 
 <h2>
 <a id="preinstalled-javascript-libraries" class="anchor" href="#preinstalled-javascript-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>PREINSTALLED JAVASCRIPT LIBRARIES</h2>
@@ -299,6 +282,27 @@
 <li>Jquery.js, </li>
 <li>Underscore.js and</li>
 <li>Backbone.js</li>
+</ul>
+
+<h2>
+<a id="samples" class="anchor" href="#samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>SAMPLES</h2>
+
+<p>Find simple games developed with the mupuntujs framework:</p>
+
+<ul>
+<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-8495372641">TicTacToe</a></li>
+<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-8495372645">TicTacToe V2</a></li>
+</ul>
+
+<h2>
+<a id="web-ide" class="anchor" href="#web-ide" aria-hidden="true"><span class="octicon octicon-link"></span></a>WEB IDE</h2>
+
+<p>The web Integrated Development Environment (IDE) simplifies the development of games, it also include an emulator.</p>
+
+<p>Since gamechat is a two-player game platform, there are two players emulations named as Alice and Bob</p>
+
+<ul>
+<li><a href="http://mupuntu.com">Mupuntu.JS Web IDE</a></li>
 </ul>
         </section>
 
