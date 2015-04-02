@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+    <meta charset="UTF-8">
     <title>Mupuntu.JS by gamechat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Mupuntu.JS</h1>
-        <h2>Game Development on Gamechat</h2>
-        <a href="https://github.com/gamechat/mupuntu" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">Mupuntu.JS</h1>
+      <h2 class="project-tagline">Game Development on Gamechat</h2>
+      <a href="https://github.com/gamechat/mupuntu" class="btn">View on GitHub</a>
+      <a href="https://github.com/gamechat/mupuntu/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/gamechat/mupuntu/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <section class="main-content">
+      <h1>
 <a id="javascript-game-development-framework" class="anchor" href="#javascript-game-development-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>JAVASCRIPT GAME DEVELOPMENT FRAMEWORK</h1>
 
 <h2>
@@ -74,14 +65,14 @@
 <span class="pl-c">* @Date         Thu 10 August 2014 08:50:32 PM GMT </span>
 <span class="pl-c">* @Description:     My Game Logic </span>
 <span class="pl-c">*/</span> 
-GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>APPID-8495372645<span class="pl-pds">"</span></span>, { 
+GAMECHAT.GAME.createGamePlay(<span class="pl-s"><span class="pl-pds">"</span>APPID-8495372645<span class="pl-pds">"</span></span>, { 
 
     <span class="pl-c">/* </span>
 <span class="pl-c">    * @Method init</span>
 <span class="pl-c">    * @Description init hook [Compulsory] </span>
 <span class="pl-c">    *   Initialize, Bootstrap and create your game here</span>
 <span class="pl-c">    */</span> 
-    <span class="pl-en">init</span> : <span class="pl-st">function</span>(){ 
+    <span class="pl-en">init</span> : <span class="pl-k">function</span>(){ 
 
     }, 
 
@@ -91,7 +82,7 @@ GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>AP
 <span class="pl-c">    *   This method is called when user navigates away from the display </span>
 <span class="pl-c">    */</span> 
 
-    <span class="pl-en">sleep</span> : <span class="pl-st">function</span> (){ 
+    <span class="pl-en">sleep</span> : <span class="pl-k">function</span> (){ 
 
     }, 
 
@@ -101,7 +92,7 @@ GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>AP
 <span class="pl-c">    *   This method is called when user navigates back to the game screen </span>
 <span class="pl-c">    */</span> 
 
-    <span class="pl-en">wake</span> : <span class="pl-st">function</span> (){ 
+    <span class="pl-en">wake</span> : <span class="pl-k">function</span> (){ 
 
     }, 
 
@@ -111,7 +102,7 @@ GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>AP
 <span class="pl-c">    *   This method is called when user exits the app </span>
 <span class="pl-c">    */</span> 
 
-    <span class="pl-en">die</span> : <span class="pl-st">function</span> (){ 
+    <span class="pl-en">die</span> : <span class="pl-k">function</span> (){ 
 
     }, 
 
@@ -136,15 +127,15 @@ GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>AP
 
 <p>Get the Local User Object</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> uObject <span class="pl-k">=</span> <span class="pl-v">this</span>.getLocalUser();
-<span class="pl-en">console</span><span class="pl-s3">.log</span>(uObject.displayName);
-<span class="pl-en">console</span><span class="pl-s3">.log</span>(uObject.playerID);</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> uObject <span class="pl-k">=</span> <span class="pl-v">this</span>.getLocalUser();
+<span class="pl-en">console</span><span class="pl-c1">.log</span>(uObject.displayName);
+<span class="pl-en">console</span><span class="pl-c1">.log</span>(uObject.playerID);</pre></div>
 
 <p>get the Remote User Object</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> ruObject <span class="pl-k">=</span> <span class="pl-v">this</span>.getRemoteUser();
-<span class="pl-en">console</span><span class="pl-s3">.log</span>(ruObject.displayName);
-<span class="pl-en">console</span><span class="pl-s3">.log</span>(ruObject.playerID);</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> ruObject <span class="pl-k">=</span> <span class="pl-v">this</span>.getRemoteUser();
+<span class="pl-en">console</span><span class="pl-c1">.log</span>(ruObject.displayName);
+<span class="pl-en">console</span><span class="pl-c1">.log</span>(ruObject.playerID);</pre></div>
 
 <h1>
 <a id="database-support" class="anchor" href="#database-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database Support</h1>
@@ -152,7 +143,7 @@ GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>AP
 <p>Provides database support. local and remote model syncing. Gamechat provides two data storages: the gamestate object for saving gamestates and the scoreboard object for storing scores, leaderboard and some useful game configurations. The gamestate and scoreboard object is passed as a single parameters to the provided callback. </p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-c">// this.getModels(callback, context);</span>
-<span class="pl-v">this</span>.getModels(<span class="pl-st">function</span>(<span class="pl-vpf">gamedata</span>){
+<span class="pl-v">this</span>.getModels(<span class="pl-k">function</span>(<span class="pl-smi">gamedata</span>){
     _gamestateModel <span class="pl-k">=</span> gamedata.gamestate;
     _scoreboardModel <span class="pl-k">=</span> gamedata.scoreboard;
 }, <span class="pl-v">this</span>);</pre></div>
@@ -170,15 +161,15 @@ GAMECHAT.GAME.createGamePlay(<span class="pl-s1"><span class="pl-pds">"</span>AP
 
 <p>You can store key value pair (json or javascript objects)</p>
 
-<div class="highlight highlight-javascript"><pre>_gamestateModel.set(<span class="pl-s1"><span class="pl-pds">'</span>turn<span class="pl-pds">'</span></span>, {player<span class="pl-k">:</span> “XXXXXX”});
-_scoreboardModel.set(<span class="pl-s1"><span class="pl-pds">'</span>totalgames<span class="pl-pds">'</span></span>, <span class="pl-c1">0</span>);</pre></div>
+<div class="highlight highlight-javascript"><pre>_gamestateModel.set(<span class="pl-s"><span class="pl-pds">'</span>turn<span class="pl-pds">'</span></span>, {player<span class="pl-k">:</span> “XXXXXX”});
+_scoreboardModel.set(<span class="pl-s"><span class="pl-pds">'</span>totalgames<span class="pl-pds">'</span></span>, <span class="pl-c1">0</span>);</pre></div>
 
 <p>You can store javascript or json objects in the database</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> gamemove <span class="pl-k">=</span> {}; 
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> gamemove <span class="pl-k">=</span> {}; 
 gamemove.gameboard <span class="pl-k">=</span> {}; 
 gamemove.gameboard[position] <span class="pl-k">=</span> {}; 
-gamemove.gameboard[position].<span class="pl-sc">status</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>; 
+gamemove.gameboard[position].<span class="pl-c1">status</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>; 
 gamemove.gameboard[position].player <span class="pl-k">=</span> playerId;
 
 _gamestateModel.set(gamemove);</pre></div>
@@ -210,26 +201,33 @@ context);</pre></div>
 <div class="highlight highlight-javascript"><pre>_scoreboardModel <span class="pl-k">=</span> <span class="pl-v">this</span>.getScoreboardModel();</pre></div>
 
 <h2>
-<a id="how-to-know-when-user-goes-offline" class="anchor" href="#how-to-know-when-user-goes-offline" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to know when user goes offline</h2>
+<a id="how-to-know-when-user-goes-offline-and-offline" class="anchor" href="#how-to-know-when-user-goes-offline-and-offline" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to know when user goes offline and offline</h2>
 
-<p>this.addEventListener(eventType, callback)</p>
+<p>This enables us to write real-time games, where the presence of the participants is crucial to play the game.
+this.addEventListener(eventType, callback)</p>
 
 <p>eventTypes: “gc:user-offline” or “gc:user-online”</p>
 
 <p>callback: method to call when the event occurs</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.addEventListener(<span class="pl-s1"><span class="pl-pds">"</span>gc:user-offline<span class="pl-pds">"</span></span>, <span class="pl-st">function</span>(){
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>local user has gone offline<span class="pl-pds">"</span></span>);
+<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.addEventListener(<span class="pl-s"><span class="pl-pds">"</span>gc:user-offline<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>(){
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">"</span>local user has gone offline<span class="pl-pds">"</span></span>);
 });
-<span class="pl-v">this</span>.addEventListener(<span class="pl-s1"><span class="pl-pds">"</span>gc:user-online<span class="pl-pds">"</span></span>, <span class="pl-st">function</span>(){
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>local user is back online<span class="pl-pds">"</span></span>);
+<span class="pl-v">this</span>.addEventListener(<span class="pl-s"><span class="pl-pds">"</span>gc:user-online<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>(){
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">"</span>local user is back online<span class="pl-pds">"</span></span>);
+});
+<span class="pl-v">this</span>.addEventListener(<span class="pl-s"><span class="pl-pds">"</span>gc:remote-online<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>(){
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">"</span>remote user is back online<span class="pl-pds">"</span></span>);
+});
+<span class="pl-v">this</span>.addEventListener(<span class="pl-s"><span class="pl-pds">"</span>gc:remote-online<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>(){
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">"</span>remote user is back online<span class="pl-pds">"</span></span>);
 });</pre></div>
 
 <p>You can stop listening anytime with this.removeEventListener(eventType)</p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-c">// These unsubscribes to the two subscribed events</span>
-<span class="pl-v">this</span>.removeEventListener(<span class="pl-s1"><span class="pl-pds">"</span>gc:user-online<span class="pl-pds">"</span></span>);
-<span class="pl-v">this</span>.removeEventListener(<span class="pl-s1"><span class="pl-pds">"</span>gc:user-offline<span class="pl-pds">"</span></span>);</pre></div>
+<span class="pl-v">this</span>.removeEventListener(<span class="pl-s"><span class="pl-pds">"</span>gc:user-online<span class="pl-pds">"</span></span>);
+<span class="pl-v">this</span>.removeEventListener(<span class="pl-s"><span class="pl-pds">"</span>gc:user-offline<span class="pl-pds">"</span></span>);</pre></div>
 
 <h2>
 <a id="how-to-create-a-custom-event" class="anchor" href="#how-to-create-a-custom-event" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to create a custom Event</h2>
@@ -248,7 +246,7 @@ context);</pre></div>
 
 <p>data is the data to send along which is recived by the callback</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.triggerEvent(<span class="pl-s1"><span class="pl-pds">"</span>reset-game<span class="pl-pds">"</span></span>, <span class="pl-c1">true</span>);</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.triggerEvent(<span class="pl-s"><span class="pl-pds">"</span>reset-game<span class="pl-pds">"</span></span>, <span class="pl-c1">true</span>);</pre></div>
 
 <ul>
 <li>this.listenTo(eventType, callback, context)</li>
@@ -256,9 +254,9 @@ context);</pre></div>
 
 <p>eventType: an abitrary event to subscribe for</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.listenTo(<span class="pl-s1"><span class="pl-pds">"</span>reset-game<span class="pl-pds">"</span></span>, <span class="pl-st">function</span>(<span class="pl-vpf">data</span>){
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>We got an event fired by a remote device:<span class="pl-pds">"</span></span>);
-    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>remote device said: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.listenTo(<span class="pl-s"><span class="pl-pds">"</span>reset-game<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">data</span>){
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">"</span>We got an event fired by a remote device:<span class="pl-pds">"</span></span>);
+    <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">"</span>remote device said: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
 } <span class="pl-v">this</span>);</pre></div>
 
 <ul>
@@ -267,7 +265,7 @@ context);</pre></div>
 
 <p>eventType is the eventType to unsubscribe</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.stopListeningTo(<span class="pl-s1"><span class="pl-pds">"</span>reset-game<span class="pl-pds">"</span></span>);</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-v">this</span>.stopListeningTo(<span class="pl-s"><span class="pl-pds">"</span>reset-game<span class="pl-pds">"</span></span>);</pre></div>
 
 <h2>
 <a id="preinstalled-javascript-libraries" class="anchor" href="#preinstalled-javascript-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>PREINSTALLED JAVASCRIPT LIBRARIES</h2>
@@ -286,8 +284,9 @@ context);</pre></div>
 <p>Find simple games developed with the mupuntujs framework:</p>
 
 <ul>
-<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-8495372641">TicTacToe</a></li>
-<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-8495372645">TicTacToe V2</a></li>
+<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-9381989197">Tic Tac Toe - Colorful</a></li>
+<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-3119528364">2-Player Word Puzzle</a></li>
+<li><a href="https://github.com/gamechat/mupuntu-games/tree/master/APPID-4284334177">King Solomon's Treasure Hunt</a></li>
 </ul>
 
 <h2>
@@ -309,25 +308,26 @@ context);</pre></div>
 <ul>
 <li><a href="https://play.google.com/apps/testing/com.mupuntu.gamechat">Download Android Emulator</a></li>
 </ul>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/gamechat/mupuntu/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/gamechat/mupuntu/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/gamechat/mupuntu">Mupuntu.JS</a> is maintained by <a href="https://github.com/gamechat">gamechat</a>.</span>
 
-          <p class="repo-owner"><a href="https://github.com/gamechat/mupuntu"></a> is maintained by <a href="https://github.com/gamechat">gamechat</a>.</p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+    </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61477751-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
+
